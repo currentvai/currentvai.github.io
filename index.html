@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurrentVai | Terminal</title>
+    <style>
+        :root {
+            --primary-color: #00ff41; /* Classic Matrix Green */
+            --bg-color: #0d0208;
+            --text-color: #00ff41;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Profile Logo Section */
+        .logo-container {
+            border: 2px solid var(--primary-color);
+            padding: 5px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+
+        .logo-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: block;
+        }
+
+        /* Terminal Style Header */
+        .terminal-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .typing {
+            overflow: hidden;
+            border-right: .15em solid var(--primary-color);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        /* Tool Showcase Grid */
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        .tool-card {
+            border: 1px solid var(--primary-color);
+            padding: 10px;
+            text-align: center;
+            background: rgba(0, 255, 65, 0.05);
+            transition: 0.3s;
+            cursor: crosshair;
+        }
+
+        .tool-card:hover {
+            background: var(--primary-color);
+            color: black;
+            box-shadow: 0 0 20px var(--primary-color);
+        }
+
+        /* Social Links */
+        .links {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .links a {
+            color: var(--text-color);
+            text-decoration: none;
+            border: 1px dashed var(--primary-color);
+            padding: 8px 15px;
+            font-size: 0.9em;
+        }
+
+        .links a:hover {
+            background: var(--primary-color);
+            color: black;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 480px) {
+            .typing { font-size: 14px; }
+            .tool-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* Animations */
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--primary-color); } }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="https://github.com/currentvai.png" alt="CurrentVai Logo">
+    </div>
+
+    <div class="terminal-header">
+        <h1 class="typing">> Accessing CurrentVai Mainframe...</h1>
+        <p>[ Status: Online ] | [ Role: Security Researcher ]</p>
+    </div>
+
+    <hr style="width: 100%; border: 0.5px solid #111;">
+
+    <h3>// My Arsenal (Tools)</h3>
+    <div class="tool-grid">
+        <div class="tool-card">Metasploit</div>
+        <div class="tool-card">Nmap</div>
+        <div class="tool-card">Burp Suite</div>
+        <div class="tool-card">Wireshark</div>
+        <div class="tool-card">Python/JS</div>
+        <div class="tool-card">Kali Linux</div>
+    </div>
+
+    <div class="links">
+        <a href="https://github.com/currentvai" target="_blank">GitHub</a>
+        <a href="https://t.me/@currentvai" target="_blank">Telegram</a>
+        <a href="https://www.facebook.com/cv.hasan.3" target="_blank">Facebook</a>
+        <a href="mailto:currentvai@gmail.com">Email</a>
+    </div>
+
+    <p style="margin-top: 50px; font-size: 0.7em; opacity: 0.5;">
+        &copy; 2026 CurrentVai. All Rights Reserved.
+    </p>
+
+</body>
+</html>
